@@ -6,13 +6,13 @@
   "keywords": ["telegram", "game", "pyrogram","telegram bot"],
   "env": {
      "BOT_TOKEN": {
-      "description": "AAHW96z6cR0UbiWSnbQjzC3v0NMASseJB90
+      "description": "AAHW96z6cR0UbiWSnbQjzC3v0NMASseJB90"
     },
     "OWNER_API_ID": {
-      "description": "16280281
+      "description": "16280281"
     },
     "OWNER_API_HASH": {
-      "description": "AAHW96z6cR0UbiWSnbQjzC3v0NMASseJB90
+      "description": "AAHW96z6cR0UbiWSnbQjzC3v0NMASseJB90"
     },
     
    },
