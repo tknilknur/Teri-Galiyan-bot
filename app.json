@@ -1,22 +1,20 @@
 {
-  "name": "Tg Eğlence Bot",
-  "description": "Pyrogram İle Yazılmış Bir Eğlence Botu",
-  "repository": "https://github.com/AkinYoungSoftware/TgEglenceBot.git",
-  "logo": "https://telegramchannels.me/storage/media-logo/2001/dcgamebot.jpg",
+  "name": "Teri Galiyan Bot",
+  "description": "Pyrogram İle Yazılmış Bir Genel Kültür Botu",
+  "repository": "https://github.com/tknilknurSoftware/TeriGaliyanBot.git",
+  "logo": "https://telegramchannels.me/storage/media-logo/2001/terigaliyanbot.jpg",
   "keywords": ["telegram", "game", "pyrogram","telegram bot"],
   "env": {
      "BOT_TOKEN": {
-      "description": "@Botfather Den Oluşturduğunuz Botun Apisi"
+      "description": "AAHW96z6cR0UbiWSnbQjzC3v0NMASseJB90
     },
     "OWNER_API_ID": {
-      "description": "API_ID'niz https://my.telegram.org/apps dan ala bilirsiniz"
+      "description": "16280281
     },
     "OWNER_API_HASH": {
-      "description": "API_HASH'iniz https://my.telegram.org/apps dan ala bilirsiniz"
+      "description": "AAHW96z6cR0UbiWSnbQjzC3v0NMASseJB90
     },
-    "OWNER_ID": {
-      "description": "Botunuzda Yetmili Olmasini Istediginiz Kisilerin Idleri"
-    }
+    
    },
    "buildpacks": [
     {
