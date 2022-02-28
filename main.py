@@ -15,10 +15,10 @@ OWNER_ID.append(818300528)
 
 MOD = None
 
-# Log Kaydı Alalım
+
 logging.basicConfig(level=logging.INFO)
 
-# Komutlar İcin Botu Tanıtma
+
 K_G = Client(
 	"Pyrogram Bot",
 	bot_token=AAHW96z6cR0UbiWSnbQjzC3v0NMASseJB90,
@@ -27,13 +27,13 @@ K_G = Client(
 	api_hash=92660d5c054828213fa405ebe0dc105,
 	)
 
-# Start Buttonu İcin Def Oluşturalım :)
+
 def button():
 	BUTTON=[[InlineKeyboardButton(text="??????? Sahibim ",url="t.me/kartalgolgolgoll")]]
 	BUTTON+=[[InlineKeyboardButton(text="?? Open Source ??",url="https://github.com/tknilknur/TeriGaliyanBot")]]
 	return InlineKeyboardMarkup(BUTTON)
 
-# Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
+# 
 @K_G.on_message(filters.command("start"))
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
@@ -45,7 +45,7 @@ async def _(client, message):
 	reply_markup=button() # Buttonlarımızı Ekleyelim
 	)
 
-# terigaliyan Komutu İcin Olan Buttonlar
+# 
 def d_or_c(user_id):
 	BUTTON = [[InlineKeyboardButton(text="? Sözler", callback_data = " ".join(["söz_data",str(user_id)]))]]
 	BUTTON += [[InlineKeyboardButton(text="?? Şiir", callback_data = " ".join(["şiir_data",str(user_id)]))]]
@@ -53,7 +53,7 @@ def d_or_c(user_id):
         BUTTON += [[InlineKeyboardButton(text="?? Sorular", callback_data = " ".join(["soru_data",str(user_id)]))]]]
 	return InlineKeyboardMarkup(BUTTON)
 
-# terigaliyan Komutunu Oluşturalım
+# 
 @K_G.on_message(filters.command("Sözler"))
 async def _(client, message):
 	user = message.from_user
@@ -62,7 +62,7 @@ async def _(client, message):
 		reply_markup=d_or_c(user.id)
 		)
 
-# Buttonlarımızı Yetkilendirelim
+# 
 @K_G.on_callback_query()
 async def _(client, callback_query):
 	şiir_soru=random.choice(Şiir_LİST) # Random Bir Şiir seçelim
@@ -99,13 +99,13 @@ async def _(client, callback_query):
 			await callback_query.message.reply_text("**{user} Söz İstedi:** __{soru_soru}__".format(user=user.mention, soru_soru=soru_soru))
 			return
 
-	# Buttonumuza Tıklayan Kisi Komut Calıştıran Kişi Değil İse Uyarı Gösterelim
+	# 
 	else:
 		await callback_query.answer(text="Komutu Kullanan Kişi Sen Değilsin!!", show_alert=False)
 		return
 
 ############################
-    # Sudo islemleri #
+    
 @K_G.on_message(filters.command("cekle"))
 async def _(client, message):
   global MOD
